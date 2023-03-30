@@ -30,7 +30,7 @@ tar -xf "%zip_file%" -C "C:\import-drivers"
 
 echo.
 echo Sürücüler yükleniyor...
-for /r "C:\import-drivers\export-drivers" %%a in (*.inf) do (
+for /r "C:\import-drivers" %%a in (*.inf) do (
     pnputil.exe /add-driver "%%a" /install
 )
 
